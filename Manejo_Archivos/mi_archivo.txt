@@ -1,0 +1,7 @@
+este
+es 
+un 
+archivo hecho con Java 
+otra linea mas
+Nueva linea de texto
+Hola desde Java
