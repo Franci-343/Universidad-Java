@@ -16,6 +16,11 @@
   		<artifactId>zona_fit</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
+  	<dependency>
+  		<groupId>gm</groupId>
+  		<artifactId>empleados</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
   </dependencies>
   
   <name>JavaSwing</name>

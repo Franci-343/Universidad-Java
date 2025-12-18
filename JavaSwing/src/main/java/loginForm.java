@@ -45,11 +45,12 @@ public class loginForm extends JFrame {
 		});
 	}
 	private void validar() {
-		var usuario = this.usuarioText.getText();
-		var password = new String(this.password.getPassword());
+		// Use explicit types instead of 'var' for compatibility with older Java compliance levels
+		String usuario = this.usuarioText.getText();
+		String pwd = new String(this.password.getPassword());
 		System.out.println(usuario);
-		System.out.println(password);
-		if("root".equals(usuario) && "admin".equals(password)) {
+		System.out.println(pwd);
+		if("root".equals(usuario) && "admin".equals(pwd)) {
 			mostrarMensaje("Login correcto, Bienvenido");
 		}else if("root".equals(usuario)) {
 			mostrarMensaje("Contraseña incorrecta");
@@ -111,34 +112,34 @@ public class loginForm extends JFrame {
 		gl_panel_1.setHorizontalGroup(
 			gl_panel_1.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_panel_1.createSequentialGroup()
-					.addGroup(gl_panel_1.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_panel_1.createSequentialGroup()
-							.addGap(180)
-							.addGroup(gl_panel_1.createParallelGroup(Alignment.LEADING, false)
-								.addComponent(usuarioText, GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-								.addComponent(password)
-								.addComponent(Usuario, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)
-								.addComponent(contraseña, GroupLayout.PREFERRED_SIZE, 104, GroupLayout.PREFERRED_SIZE)))
-						.addGroup(gl_panel_1.createSequentialGroup()
-							.addGap(211)
-							.addComponent(enviar, GroupLayout.PREFERRED_SIZE, 101, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap(190, Short.MAX_VALUE))
-		);
+						.addGroup(gl_panel_1.createParallelGroup(Alignment.LEADING)
+							.addGroup(gl_panel_1.createSequentialGroup()
+								.addGap(180)
+								.addGroup(gl_panel_1.createParallelGroup(Alignment.LEADING, false)
+										.addComponent(usuarioText, GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+										.addComponent(password)
+										.addComponent(Usuario, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)
+										.addComponent(contraseña, GroupLayout.PREFERRED_SIZE, 104, GroupLayout.PREFERRED_SIZE)))
+							.addGroup(gl_panel_1.createSequentialGroup()
+								.addGap(211)
+								.addComponent(enviar, GroupLayout.PREFERRED_SIZE, 101, GroupLayout.PREFERRED_SIZE)))
+						.addContainerGap(190, Short.MAX_VALUE))
+			);
 		gl_panel_1.setVerticalGroup(
 			gl_panel_1.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel_1.createSequentialGroup()
-					.addGap(45)
-					.addComponent(Usuario)
-					.addGap(16)
-					.addComponent(usuarioText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(contraseña)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(password, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-					.addGap(18)
-					.addComponent(enviar)
-					.addContainerGap(99, Short.MAX_VALUE))
-		);
+						.addGap(45)
+						.addComponent(Usuario)
+						.addGap(16)
+						.addComponent(usuarioText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addPreferredGap(ComponentPlacement.UNRELATED)
+						.addComponent(contraseña)
+						.addPreferredGap(ComponentPlacement.RELATED)
+						.addComponent(password, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+						.addGap(18)
+						.addComponent(enviar)
+						.addContainerGap(99, Short.MAX_VALUE))
+			);
 		panel_1.setLayout(gl_panel_1);
 		
 		Component verticalStrut = Box.createVerticalStrut(32);
